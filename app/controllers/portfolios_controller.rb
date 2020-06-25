@@ -32,10 +32,20 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Record was successfully updated.' }
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      # we use url here instead of path because destroy method has no any view that means also has no any route or path
+      # so we have to write the whole url for redirecting.
+      format.html { redirect_to portfolios_url, notice: 'Record was successfully removed.' }
     end
   end
 end

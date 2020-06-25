@@ -1119,3 +1119,98 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 4871)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-25 17:53:05 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.6ms | Allocations: 11874)
+
+
+Started DELETE "/portfolios/2" for ::1 at 2020-06-25 17:53:06 +0300
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xZwvfR7bQihz13GjRlI+hzzrrBHLVdRKNLbV5Uhym2dviPW/5pvDLLOcy1hBxCWDf6osPH/j3NWfamEUaMAl0w==", "id"=>"2"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:43:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[36mPortfolio Destroy (0.4ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms | Allocations: 2955)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-25 17:53:06 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1867)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 6155)
+
+
+Started DELETE "/portfolios/1" for ::1 at 2020-06-25 17:53:08 +0300
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dc+yyQ7e5kGsWoZVezjfGFfTPlseKsW1LdC54p9yUC2n22gL9p5nRWwRPK58rsQcFJK+dqqczSqGDA0Tv8DumQ==", "id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:43:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[36mPortfolio Destroy (0.4ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2792)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-25 17:53:08 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 6011)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-25 17:53:16 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2000)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 7184)
+
+
+Started DELETE "/portfolios/10" for ::1 at 2020-06-25 17:53:42 +0300
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0oj8Bm3I9eWfCb8QpKJZBcUYT27IpE2PIXquQb5gGLl4nCbElYh04V9CBeujNEIBhlnPQ3wSRRCKphqwntKmDQ==", "id"=>"10"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:43:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[36mPortfolio Destroy (0.4ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 2792)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-25 17:53:42 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 5898)
+
+
