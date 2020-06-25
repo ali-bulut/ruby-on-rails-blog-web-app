@@ -6,7 +6,8 @@
 
 <% @portfolio_items.each do |portfolio_item|  %>
   <%# we dont need to write .id ruby will understand that if we only write portfolio_item %>
-  <p><%= link_to portfolio_item.title, portfolio_path(portfolio_item.id) %></p>
+  <%# portfolio.show is coming from routes file. We defined it by writing as. %>
+  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p>
   <p><%= portfolio_item.subtitle %></p>
   <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
