@@ -2073,3 +2073,94 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 6279)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6045777927375424770)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBadgeToSkills (20200626093617)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "skills" ADD "badge" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200626093617"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6045777927375424770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/portfolios" for ::1 at 2020-06-26 12:45:16 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 0.9ms | Allocations: 11066)
+
+
+Started GET "/portfolios/new" for ::1 at 2020-06-26 12:45:18 +0300
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 5215)
+
+
+Started POST "/portfolios" for ::1 at 2020-06-26 12:45:21 +0300
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"TARPwIWZ9OznZ/ymFNXtuKMn3woABd8lDuWT5Wk7ZpcvhP4oyhK5zS33HJP2Cwu+LcHHaJHfTwtGh57kmPLQVQ==", "portfolio"=>{"title"=>"sdg", "subtitle"=>"sdg", "body"=>"sdg"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[36mPortfolio Create (0.7ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "sdg"], ["subtitle", "sdg"], ["body", "sdg"], ["main_image", "https://via.placeholder.com/600x400"], ["thumb_image", "https://via.placeholder.com/350x200"], ["created_at", "2020-06-26 09:45:21.758501"], ["updated_at", "2020-06-26 09:45:21.758501"]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 2852)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-26 12:45:21 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2133)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 6424)
+
+
+Started GET "/portfolio/11" for ::1 at 2020-06-26 12:45:27 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:15:in `show'
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 5028)
+
+
+Started DELETE "/portfolios/11" for ::1 at 2020-06-26 12:45:30 +0300
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YvnbjCQH5eZ+m9seVQ7pwgWiI2r6cQuyBIZUtTzJQlfI7QFO3Edk4r7QYeVSmPLGRuOjR07HAy2vWuBEHHv84w==", "id"=>"11"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:51:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mPortfolio Destroy (0.4ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 2810)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-26 12:45:30 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 6267)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.5ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Some skill"], ["percent_utilized", 80], ["created_at", "2020-06-26 09:46:31.709006"], ["updated_at", "2020-06-26 09:46:31.709006"], ["badge", "https://via.placeholder.com/250x250"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
