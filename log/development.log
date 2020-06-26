@@ -2410,3 +2410,144 @@ FOREIGN KEY ("portfolio_id")
   [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+Started GET "/portfolios" for ::1 at 2020-06-26 13:36:08 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 6520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 0.5ms | Allocations: 12991)
+
+
+Started GET "/portfolio/1" for ::1 at 2020-06-26 13:36:10 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:15:in `show'
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechology Load (0.4ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4071)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.4ms | ActiveRecord: 3.5ms | Allocations: 9102)
+
+
+Started GET "/portfolios/new" for ::1 at 2020-06-26 13:36:14 +0300
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2025)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 3.1ms | Allocations: 10047)
+
+
+Started POST "/portfolios" for ::1 at 2020-06-26 13:36:42 +0300
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"Ka4ptkhWn8maAQiLXugh0k3P8pwQ6twk0vX7Bs0qbApKLpheB93S6FCR6L68NsfUwynq/oEwTAqal/YHPOPayA==", "portfolio"=>{"title"=>"new protfl", "subtitle"=>"aldnadmfk", "body"=>"jkndsjkn", "techologies_attributes"=>{"0"=>{"name"=>"React Native"}, "1"=>{"name"=>"Angular"}, "2"=>{"name"=>"NodeJS"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mPortfolio Create (0.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "new protfl"], ["subtitle", "aldnadmfk"], ["body", "jkndsjkn"], ["main_image", "https://via.placeholder.com/600x400"], ["thumb_image", "https://via.placeholder.com/350x200"], ["created_at", "2020-06-26 10:36:42.707390"], ["updated_at", "2020-06-26 10:36:42.707390"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.6ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "React Native"], ["portfolio_id", 11], ["created_at", "2020-06-26 10:36:42.711341"], ["updated_at", "2020-06-26 10:36:42.711341"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.4ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 11], ["created_at", "2020-06-26 10:36:42.713723"], ["updated_at", "2020-06-26 10:36:42.713723"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.3ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NodeJS"], ["portfolio_id", 11], ["created_at", "2020-06-26 10:36:42.715873"], ["updated_at", "2020-06-26 10:36:42.715873"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms | Allocations: 7526)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-26 13:36:42 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 6557)
+
+
+Started GET "/portfolio/11" for ::1 at 2020-06-26 13:36:46 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:15:in `show'
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechology Load (0.3ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 5696)
+
+
+  [1m[36mTechology Load (0.6ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/portfolios/new" for ::1 at 2020-06-26 13:40:02 +0300
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1551)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 6283)
+
+
+Started POST "/portfolios" for ::1 at 2020-06-26 13:40:13 +0300
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"bbPXeRQRvKf8cxbH8Be58R/uQtJyjCqnavre9bhJLE4OM2aRW5rxhjbj9vISyV/3kQhasONWuokimNP0SYCajA==", "portfolio"=>{"title"=>"test", "subtitle"=>"testststs", "body"=>"teagdsggsd", "techologies_attributes"=>{"0"=>{"name"=>"Ruby"}, "1"=>{"name"=>"React"}, "2"=>{"name"=>"Angular"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["subtitle", "testststs"], ["body", "teagdsggsd"], ["main_image", "https://via.placeholder.com/600x400"], ["thumb_image", "https://via.placeholder.com/350x200"], ["created_at", "2020-06-26 10:40:13.639103"], ["updated_at", "2020-06-26 10:40:13.639103"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.4ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 12], ["created_at", "2020-06-26 10:40:13.642629"], ["updated_at", "2020-06-26 10:40:13.642629"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.4ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "React"], ["portfolio_id", 12], ["created_at", "2020-06-26 10:40:13.644907"], ["updated_at", "2020-06-26 10:40:13.644907"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[36mTechology Create (0.3ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 12], ["created_at", "2020-06-26 10:40:13.646798"], ["updated_at", "2020-06-26 10:40:13.646798"]]
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms | Allocations: 7350)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-26 13:40:13 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6715)
+
+
+  [1m[36mTechology Load (0.4ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/portfolio/11" for ::1 at 2020-06-26 13:42:05 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:15:in `show'
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechology Load (0.2ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 5684)
+
+
+Started GET "/portfolio/12" for ::1 at 2020-06-26 13:42:08 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:15:in `show'
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechology Load (0.3ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 12]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 5678)
+
+
+  [1m[36mTechology Load (4.2ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE (Angular) LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTechology Load (0.8ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."name" = $1 LIMIT $2[0m  [["name", "Angular"], ["LIMIT", 11]]

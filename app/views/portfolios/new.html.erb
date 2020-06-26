@@ -17,6 +17,16 @@
     <%= form.text_area :body %>
   </div>
 
+  <ul>
+    <%# we wrote in controller 3.times for technologies that means this code will run for 3 times. %>
+    <%= form.fields_for :techologies do |techology_form| %>
+      <li>
+        <%= techology_form.label :name %>
+        <%= techology_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>
