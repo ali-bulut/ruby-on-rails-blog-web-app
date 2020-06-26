@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-  # we created a helper module in concerns folder in order to create images from one place.
+  # we created a helper module(called as concern) in concerns folder in order to create images from one place.
   # so we can reach this module like this.
   include Placeholder
   validates_presence_of :title, :percent_utilized
