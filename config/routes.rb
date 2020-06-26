@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # by writing this we are changing the path (we use /login instead of user/sign_in, /register instead of user/sign_up)
+  # if we would write something in path we would reach /something/login
+  devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
+
   # when we use specific route for all of the operations such as delete, patch, post, get...,  we should use
   # resources. But if we have simple pages for only showing (like about or contact pages) we can simply use get.
 
