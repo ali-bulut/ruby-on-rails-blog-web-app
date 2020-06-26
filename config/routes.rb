@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show]
   # so we can create a custom route for show. as => we can set the prefix(route method) of show route.
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  get 'angular-items', to: 'portfolios#angular'
 
   # if we want to reach about page by writing directly (localhost:3000/about instead of localhost:3000/pages/about)
   #get 'pages/about'
