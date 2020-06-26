@@ -1,5 +1,11 @@
 class Portfolio < ApplicationRecord
   has_many :techologies
+  # we can add that into portfolio by writing =>
+  # Portfolio.create!(title="dgsd", body:"sfgs", techologies_attributes: [{name:"Ruby"}, {name:"Rails"}, {name:"React"}])
+  # after that query, we will have one more portolio, and 3 more technologies. That means if we write bottom code
+  # we can create new techologies inside of the Portfolio query.
+  # that means => do not accept technologies if name attr of technology is empty (this is just a validation.)
+  accepts_nested_attributes_for :techologies, reject_if: lambda { |attrs| attrs["name"].blank? }
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 

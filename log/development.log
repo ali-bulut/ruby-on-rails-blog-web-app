@@ -2402,3 +2402,11 @@ FOREIGN KEY ("portfolio_id")
   [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 9]]
   [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1 LIMIT $2[0m  [["subtitle", "Angular"], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Web app"], ["subtitle", "sgdsdgsd"], ["body", "sfgs"], ["main_image", "https://via.placeholder.com/600x400"], ["thumb_image", "https://via.placeholder.com/350x200"], ["created_at", "2020-06-26 10:20:03.065151"], ["updated_at", "2020-06-26 10:20:03.065151"]]
+  [1m[36mTechology Create (1.6ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 10], ["created_at", "2020-06-26 10:20:03.072196"], ["updated_at", "2020-06-26 10:20:03.072196"]]
+  [1m[36mTechology Create (0.3ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 10], ["created_at", "2020-06-26 10:20:03.074633"], ["updated_at", "2020-06-26 10:20:03.074633"]]
+  [1m[36mTechology Create (0.2ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "React"], ["portfolio_id", 10], ["created_at", "2020-06-26 10:20:03.075442"], ["updated_at", "2020-06-26 10:20:03.075442"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
