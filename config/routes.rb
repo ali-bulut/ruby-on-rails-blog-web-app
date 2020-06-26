@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # when we use specific route for all of the operations such as delete, patch, post, get...,  we should use
   # resources. But if we have simple pages for only showing (like about or contact pages) we can simply use get.
 
