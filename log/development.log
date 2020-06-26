@@ -1600,3 +1600,121 @@ Migrating to AddPostStatusToBlogs (20200625163506)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6045777927375424770)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/blogs" for ::1 at 2020-06-26 09:29:50 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 6611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 38.2ms | ActiveRecord: 5.4ms | Allocations: 16516)
+
+
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Update (0.8ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", "2020-06-26 06:30:27.027078"], ["id", 10]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/blogs" for ::1 at 2020-06-26 09:30:29 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1986)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 6272)
+
+
+Started GET "/blogs" for ::1 at 2020-06-26 09:50:01 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 6844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 33.0ms | ActiveRecord: 4.0ms | Allocations: 16717)
+
+
+Started GET "/blogs/1/toggle_status" for ::1 at 2020-06-26 09:50:04 +0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+  [1m[36mBlog Update (0.5ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", "2020-06-26 06:50:04.080378"], ["id", 1]]
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms | Allocations: 4769)
+
+
+Started GET "/blogs" for ::1 at 2020-06-26 09:50:04 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.4ms | Allocations: 6527)
+
+
+Started GET "/blogs/5/toggle_status" for ::1 at 2020-06-26 09:50:10 +0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "5"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+  [1m[36mBlog Update (0.3ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", "2020-06-26 06:50:10.356772"], ["id", 5]]
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:64:in `toggle_status'
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 11ms (ActiveRecord: 2.4ms | Allocations: 4144)
+
+
+Started GET "/blogs" for ::1 at 2020-06-26 09:50:10 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 6513)
+
+
+Started GET "/blogs/5/toggle_status" for ::1 at 2020-06-26 09:50:23 +0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "5"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:74:in `set_blog'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:66:in `toggle_status'
+  [1m[36mBlog Update (0.7ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 0], ["updated_at", "2020-06-26 06:50:23.038336"], ["id", 5]]
+  ↳ app/controllers/blogs_controller.rb:66:in `toggle_status'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:66:in `toggle_status'
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 18ms (ActiveRecord: 1.8ms | Allocations: 4139)
+
+
+Started GET "/blogs" for ::1 at 2020-06-26 09:50:23 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 6517)
+
+

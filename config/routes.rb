@@ -18,7 +18,13 @@ Rails.application.routes.draw do
   get 'contact-me', to: 'pages#contact'
 
 
-  resources :blogs
+  # we can add custom routes into current routes like this.
+  # and we can reach by writing toggle_status_blog_path/url
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 
   # we can define root path of app like this. We use # instead of /
   root to: 'pages#home'
