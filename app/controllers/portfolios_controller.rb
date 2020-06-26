@@ -1,6 +1,14 @@
 class PortfoliosController < ApplicationController
   def index
+    # we can reach angular method from portfolio model. We created a query from there and we can reach from here
+    # without writing any query.
+    # @portfolio_items = Portfolio.angular
+    # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items
     @portfolio_items = Portfolio.all
+  end
+
+  def angular
+    @angular_portfolio_items = Portfolio.angular
   end
 
   def show
