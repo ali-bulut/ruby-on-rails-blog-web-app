@@ -5420,3 +5420,16 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 46ms (Views: 37.4ms | ActiveRecord: 5.2ms | Allocations: 14823)
 
 
+Started GET "/" for ::1 at 2020-06-27 21:43:54 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.5ms | Allocations: 9864)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 302)
+Completed 200 OK in 56ms (Views: 42.6ms | ActiveRecord: 1.1ms | Allocations: 20899)
+
+
