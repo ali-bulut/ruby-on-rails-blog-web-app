@@ -4949,3 +4949,198 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 6601)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-27 14:54:44 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:11
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.9ms | Allocations: 1323)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 5.5ms | Allocations: 2973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 292)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.7ms | Allocations: 8361)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:54:47 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 6.1ms | Allocations: 2126)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 10.3ms | Allocations: 3539)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 115)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 8595)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:54:47 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 3.6ms | Allocations: 1928)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 5.3ms | Allocations: 2858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 110)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 7219)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:55:00 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 10.9ms | Allocations: 2112)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 15.3ms | Allocations: 3500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 292)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.3ms | Allocations: 8897)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:55:01 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 3.7ms | Allocations: 1928)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 5.8ms | Allocations: 2859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 110)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 7226)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:55:17 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 3.6ms | Allocations: 2112)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 6.8ms | Allocations: 3505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 292)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 8913)
+
+
+Started GET "/blogs/new" for ::1 at 2020-06-27 14:55:37 +0300
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 4.1ms | Allocations: 1065)
+  Rendered blogs/new.html.erb within layouts/blog (Duration: 5.7ms | Allocations: 1393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 113)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5908)
+
+
+Started POST "/blogs" for ::1 at 2020-06-27 14:55:46 +0300
+Processing by BlogsController#create as HTML
+  Parameters: {"authenticity_token"=>"cEXBqWG/7oOis46bxkq+vqUh64Ja/rq1tTrQPjk7cG2jmIVUpubmXd0nOm4wzMTP3sK4gUSij5COI+CWWfc32Q==", "blog"=>{"title"=>"Test blog", "body"=>"Test body"}, "commit"=>"Create Blog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  [1m[36mBlog Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "test-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 1.9ms | Allocations: 845)
+  Rendered blogs/new.html.erb within layouts/blog (Duration: 2.1ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 109)
+Completed 200 OK in 41ms (Views: 8.3ms | ActiveRecord: 2.1ms | Allocations: 33426)
+
+
+Started POST "/blogs" for ::1 at 2020-06-27 14:56:34 +0300
+Processing by BlogsController#create as HTML
+  Parameters: {"authenticity_token"=>"rT3mVT7SAP/N0KFZvkgmdynEGWtu3ZVYSxXDME8c0Rv37ywXFEKEkvs09fnJsqI0t3/P+mwYbF+ZGrr/+8ZWgQ==", "blog"=>{"title"=>"Test blog", "body"=>"Test body"}, "commit"=>"Create Blog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  [1m[36mBlog Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "test-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  [1m[36mBlog Create (1.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test blog"], ["body", "Test body"], ["created_at", "2020-06-27 11:56:34.780553"], ["updated_at", "2020-06-27 11:56:34.780553"], ["slug", "test-blog"]]
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:38:in `block in create'
+Redirected to http://localhost:3000/blogs/test-blog
+Completed 302 Found in 34ms (ActiveRecord: 10.1ms | Allocations: 10200)
+
+
+Started GET "/blogs/test-blog" for ::1 at 2020-06-27 14:56:34 +0300
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"test-blog"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "test-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:82:in `set_blog'
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (Duration: 1.0ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 114)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 5737)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:56:37 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [11 times] (Duration: 4.5ms | Allocations: 2123)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 6.7ms | Allocations: 3077)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 110)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms | Allocations: 7429)
+
+
+Started DELETE "/blogs/test-blog" for ::1 at 2020-06-27 14:56:44 +0300
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7sdy/FsFrUvvmevPS7cBxXtDYWyStpYB0D/TZyPXVty0Fbi+cZUpJtl9v288TYWG5fi3/ZBzbwYCMKqolw3RRg==", "id"=>"test-blog"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "test-blog"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:82:in `set_blog'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:61:in `destroy'
+  [1m[36mBlog Destroy (2.7ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/blogs_controller.rb:61:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:61:in `destroy'
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms | Allocations: 3008)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:56:44 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 4.9ms | Allocations: 1924)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 6.9ms | Allocations: 2855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 110)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 7221)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:58:16 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:21
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 4.5ms | Allocations: 2111)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 7.5ms | Allocations: 3504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 292)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms | Allocations: 8892)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-27 14:58:19 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 129)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6563)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-27 14:58:19 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 119)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4384)
+
+

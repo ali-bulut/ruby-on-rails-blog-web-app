@@ -8,5 +8,5 @@ class Blog < ApplicationRecord
 
   # by writing this we say ruby that every blog has a topic.
   # so we can reach the topic of the first blog by using this => Blog.first.topic
-  belongs_to :topic
+  belongs_to :topic, optional: true
 end
