@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-  has_many :techologies
+  has_many :techologies, dependent: :destroy
   # we can add that into portfolio by writing =>
   # Portfolio.create!(title="dgsd", body:"sfgs", techologies_attributes: [{name:"Ruby"}, {name:"Rails"}, {name:"React"}])
   # after that query, we will have one more portolio, and 3 more technologies. That means if we write bottom code

@@ -77,6 +77,7 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
+      # fetching blog from params which is coming from html form and only allow to pass title and body to controller.
       params.require(:blog).permit(:title, :body)
     end
 end

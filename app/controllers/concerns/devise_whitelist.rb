@@ -1,3 +1,5 @@
+# module name is really important. if we wrote for filename devise_whitelist, we should write DeviseWhitelist for
+# module name. If we wrote for filename devise_white_list, we should write DeviseWhiteList!
 module DeviseWhitelist
   extend ActiveSupport::Concern
 
