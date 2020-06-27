@@ -4511,3 +4511,441 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 7097)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-27 14:31:17 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 30.6ms | Allocations: 7699)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 11.2ms | Allocations: 11285)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/app/views"
+  * "/Users/alibulut/.rvm/gems/ruby-2.7.1/gems/devise-4.7.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+    4: 
+    5: <%= link_to "Create New Item", new_portfolio_path %>
+    6: 
+    7: <% render @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7
+Started GET "/portfolios" for ::1 at 2020-06-27 14:31:18 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.8ms | Allocations: 2043)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms | Allocations: 2520)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/app/views"
+  * "/Users/alibulut/.rvm/gems/ruby-2.7.1/gems/devise-4.7.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+    4: 
+    5: <%= link_to "Create New Item", new_portfolio_path %>
+    6: 
+    7: <% render @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7
+Started GET "/" for ::1 at 2020-06-27 14:33:03 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.7ms | Allocations: 10404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 312)
+Completed 200 OK in 126ms (Views: 99.8ms | ActiveRecord: 10.5ms | Allocations: 24957)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:33:05 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 7.1ms | Allocations: 1725)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 12.0ms | Allocations: 2971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 115)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 8222)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:33:05 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 5.9ms | Allocations: 1478)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 9.7ms | Allocations: 2408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.6ms | Allocations: 6755)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:33:19 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 2.5ms | Allocations: 1648)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 6.3ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 292)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 8276)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:33:27 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 2.5ms | Allocations: 1648)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 5.4ms | Allocations: 2867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 292)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 8263)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:33:28 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 2.3ms | Allocations: 1478)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 4.4ms | Allocations: 2419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 110)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms | Allocations: 6778)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:33:30 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 4.3ms | Allocations: 2525)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 3378)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/app/views"
+  * "/Users/alibulut/.rvm/gems/ruby-2.7.1/gems/devise-4.7.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+    4: 
+    5: <%= link_to "Create New Item", new_portfolio_path %>
+    6: 
+    7: <%= render @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7
+Started GET "/portfolios" for ::1 at 2020-06-27 14:41:39 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.9ms | Allocations: 1339)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 8.0ms | Allocations: 2811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 292)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.2ms | Allocations: 8314)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:41:39 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.4ms | Allocations: 1121)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.3ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 6577)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:41:41 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:20
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 3.7ms | Allocations: 1648)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 7.9ms | Allocations: 2890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 115)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.6ms | Allocations: 7948)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:41:41 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:20
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 5.1ms | Allocations: 1478)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 11.3ms | Allocations: 2408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 110)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.4ms | Allocations: 6767)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:41:43 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.3ms | Allocations: 1121)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.4ms | Allocations: 2214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 115)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 6585)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:41:43 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.3ms | Allocations: 1118)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.0ms | Allocations: 2206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 6561)
+
+
+Started GET "/portfolios/new" for ::1 at 2020-06-27 14:41:45 +0300
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/_form.html.erb (Duration: 18.5ms | Allocations: 4223)
+  Rendered portfolios/new.html.erb within layouts/portfolio (Duration: 19.8ms | Allocations: 4506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 114)
+Completed 200 OK in 67ms (Views: 30.4ms | ActiveRecord: 5.6ms | Allocations: 17139)
+
+
+Started POST "/portfolios" for ::1 at 2020-06-27 14:41:55 +0300
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"TcgtNePAT6n5wdHIWSRyZkKzxZGNFH/MqhoJQc7zKvQML5BPiulunNx6kXzccpnZJ3MTMDNg6qgX9TCx8SUviQ==", "portfolio"=>{"title"=>"sndgmnkj", "subtitle"=>"jkadnfjn", "body"=>"kandfjkafnsjn", "techologies_attributes"=>{"0"=>{"name"=>"Ruby"}, "1"=>{"name"=>"Ruby"}, "2"=>{"name"=>"Ruby"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[36mPortfolio Create (5.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "sndgmnkj"], ["subtitle", "jkadnfjn"], ["body", "kandfjkafnsjn"], ["main_image", "https://via.placeholder.com/600x400"], ["thumb_image", "https://via.placeholder.com/350x200"], ["created_at", "2020-06-27 11:41:55.963308"], ["updated_at", "2020-06-27 11:41:55.963308"]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[36mTechology Create (7.0ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:41:55.972249"], ["updated_at", "2020-06-27 11:41:55.972249"]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[36mTechology Create (0.6ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:41:55.981953"], ["updated_at", "2020-06-27 11:41:55.981953"]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[36mTechology Create (0.9ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:41:55.984385"], ["updated_at", "2020-06-27 11:41:55.984385"]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 31ms (ActiveRecord: 16.0ms | Allocations: 7709)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:41:55 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (Duration: 1.9ms | Allocations: 1243)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 8.4ms | Allocations: 2361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 110)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 1.5ms | Allocations: 6742)
+
+
+Started GET "/portfolios/15/edit" for ::1 at 2020-06-27 14:41:58 +0300
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:36:in `edit'
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechology Load (1.0ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 15]]
+  ↳ app/views/portfolios/_form.html.erb:20
+  Rendered portfolios/_form.html.erb (Duration: 8.6ms | Allocations: 2890)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (Duration: 9.7ms | Allocations: 3036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 115)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 1.6ms | Allocations: 8489)
+
+
+Started PATCH "/portfolios/15" for ::1 at 2020-06-27 14:42:02 +0300
+Processing by PortfoliosController#update as HTML
+  Parameters: {"authenticity_token"=>"bFFFkCOnODMDzCfAm80Sj/RfvZWl0URdnN+KPrWIsPTNAZfkyqkYZJpBshksm0H8bdoQ9oFSIu2DUNLvxNaqzw==", "portfolio"=>{"title"=>"getegea", "subtitle"=>"jkadnfjn", "body"=>"kandfjkafnsjn", "techologies_attributes"=>{"0"=>{"name"=>"Ruby", "id"=>"22"}, "1"=>{"name"=>"Ruby", "id"=>"23"}, "2"=>{"name"=>"Ruby", "id"=>"24"}}}, "commit"=>"Update Portfolio", "id"=>"15"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:40:in `update'
+[31mUnpermitted parameter: :id[0m
+[31mUnpermitted parameter: :id[0m
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+  [1m[36mPortfolio Update (1.9ms)[0m  [1m[33mUPDATE "portfolios" SET "title" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["title", "getegea"], ["updated_at", "2020-06-27 11:42:02.103553"], ["id", 15]]
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+  [1m[36mTechology Create (1.3ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:42:02.109933"], ["updated_at", "2020-06-27 11:42:02.109933"]]
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+  [1m[36mTechology Create (1.2ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:42:02.115526"], ["updated_at", "2020-06-27 11:42:02.115526"]]
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+  [1m[36mTechology Create (0.6ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 15], ["created_at", "2020-06-27 11:42:02.118879"], ["updated_at", "2020-06-27 11:42:02.118879"]]
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:42:in `block in update'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 26ms (ActiveRecord: 6.0ms | Allocations: 8250)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:42:02 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (Duration: 1.8ms | Allocations: 1242)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.9ms | Allocations: 2360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 6762)
+
+
+Started GET "/portfolio/15" for ::1 at 2020-06-27 14:42:05 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:16:in `show'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.4ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 15]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 3.0ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 128)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 6162)
+
+
+Started GET "/portfolio/15" for ::1 at 2020-06-27 14:42:10 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:16:in `show'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.7ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 15]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 6.0ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 119)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 1.5ms | Allocations: 5827)
+
+
+Started DELETE "/portfolios/15" for ::1 at 2020-06-27 14:42:15 +0300
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lBirHb8tWqBNAQrP7aP84WFeGyNbANog44UDkO9IRCzOymFflb3ezXvlXm+aWXii/+XNslnFIycxinpfW5LDtg==", "id"=>"15"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:51:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Load (0.4ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 15]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.5ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.3ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.3ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.4ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.3ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mTechology Destroy (0.3ms)[0m  [1m[31mDELETE FROM "techologies" WHERE "techologies"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[36mPortfolio Destroy (0.9ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 24ms (ActiveRecord: 4.1ms | Allocations: 9710)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:42:15 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.8ms | Allocations: 1121)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 4.3ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 110)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms | Allocations: 6584)
+
+
+Started GET "/portfolios/10/edit" for ::1 at 2020-06-27 14:42:18 +0300
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:36:in `edit'
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.3ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+  ↳ app/views/portfolios/_form.html.erb:20
+  Rendered portfolios/_form.html.erb (Duration: 6.7ms | Allocations: 2631)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (Duration: 7.2ms | Allocations: 2695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 109)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.5ms | Allocations: 7612)
+
+
+Started GET "/portfolio/10" for ::1 at 2020-06-27 14:42:22 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:16:in `show'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.3ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+  ↳ app/views/portfolios/show.html.erb:8
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 1.9ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 119)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 5772)
+
+
+Started GET "/blogs" for ::1 at 2020-06-27 14:48:08 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:20
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 3.8ms | Allocations: 1648)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 10.3ms | Allocations: 2989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 292)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.8ms | Allocations: 8397)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:48:15 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:11
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 2.0ms | Allocations: 1324)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 7.1ms | Allocations: 2882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 119)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 7984)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-27 14:48:15 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:11
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.6ms | Allocations: 1121)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 4.0ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 6601)
+
+
