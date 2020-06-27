@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  # we can define a special layout which will be used for blogs pages by using this.
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json
