@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  layout "portfolio"
   def index
     # we can reach angular method from portfolio model. We created a query from there and we can reach from here
     # without writing any query.

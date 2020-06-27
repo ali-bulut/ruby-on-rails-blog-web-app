@@ -4,6 +4,13 @@
 
 <%= link_to "Create New Item", new_portfolio_path %>
 
+<%# here controller name and variable name are not matching. So rails cannot understand like blogs.
+So here we should change our code a bit. And we dont need to change our code from partialView.
+We should tell rails that is our partialView and also that is our
+collection which rails will each inside of it.%>
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+
+<% if false %>
 <% @portfolio_items.each do |portfolio_item|  %>
   <%# we dont need to write .id ruby will understand that if we only write portfolio_item %>
   <%# portfolio.show is coming from routes file. We defined it by writing as. %>
@@ -15,4 +22,5 @@
   <%# method: delete => by using that ruby understand when button clicked there will be no redirection. Just a delete operation. %>
   <%# default method is get. when we redirect to page after clicking we dont need to write method: get %>
   <%= link_to 'Remove', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 <% end %>

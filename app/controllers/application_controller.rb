@@ -5,6 +5,5 @@ class ApplicationController < ActionController::Base
   # and we should not write the whole code here. We should separate codes into different modules.
   include SetSource
   include CurrentUserConcern
-
-
+  include DefaultPageContent
 end
