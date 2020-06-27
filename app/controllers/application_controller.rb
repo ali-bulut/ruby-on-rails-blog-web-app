@@ -1,11 +1,7 @@
 class ApplicationController < ActionController::Base
   include DeviseWhitelist
-
-  before_action :set_source
-
-  def set_source
-    # we can write anything we want instead of source, not important. We can reach session data
-    # by searching source keyword.
-    session[:source] = params[:q] if params[:q]
-  end
+  # we defined session data in application_controller because application_controller is the parent. And the others'
+  # coming from here. So if we define anything here, we can access wherever we want in the whole project.
+  # and we should not write the whole code here. We should separate codes into different modules.
+  include SetSource
 end
