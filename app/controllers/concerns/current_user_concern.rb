@@ -12,10 +12,18 @@ module CurrentUserConcern
   end
 
   def guest_user
-    OpenStruct.new(name: "Guest User",
-                   first_name: "Guest",
-                   last_name: "User",
-                   email: "guest@user.com"
-    )
+    # there is a bug when we use petergate gem. So we use another option down here.
+    #OpenStruct.new(name: "Guest User",
+    #               first_name: "Guest",
+    #               last_name: "User",
+    #               email: "guest@user.com"
+    #)
+
+    guest = GuestUser.new
+    guest.name = "Guest User"
+    guest.first_name = "Guest"
+    guest.last_name = "User"
+    guest.email = "guest@user.com"
+    guest
   end
 end

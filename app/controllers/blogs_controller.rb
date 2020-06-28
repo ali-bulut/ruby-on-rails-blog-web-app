@@ -3,6 +3,10 @@ class BlogsController < ApplicationController
   # we can define a special layout which will be used for blogs pages by using this.
   layout "blog"
 
+  # this is a definition for petergate. That means  => everyone can access show and index pages. User's(they can only
+  # write a comment) cannot access destroy, new, create, edit and update pages. And site_admin can access everywhere.
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
+
   # GET /blogs
   # GET /blogs.json
   def index
