@@ -24,12 +24,10 @@ we should write without _%>
       <%#   <%= render "shared/nav", location: "top" %>
       <%= render "shared/application_nav" %>
 
-<%# and here we can define view helper. The difference is generally we dont write inside of view helpers html.
-Generally we use helpers for razor operations.(like if else or case statements) %>
-      <%= login_helper %>
-
       <%= yield %>
-      <%= @copyright %>
+
+      <%= render "shared/application_footer" %>
+
 <%# and also we can pass parameters to view helpers %>
       <%= source_helper("application") %>
     </div>
