@@ -5433,3 +5433,16 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 56ms (Views: 42.6ms | ActiveRecord: 1.1ms | Allocations: 20899)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
