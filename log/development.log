@@ -12836,3 +12836,172 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 1.0ms | Allocations: 13567)
 
 
+Started GET "/blogs" for ::1 at 2020-06-29 18:28:37 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 1.9ms | Allocations: 1064)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 6.6ms | Allocations: 3764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.6ms | Allocations: 13573)
+
+
+Started GET "/blogs" for ::1 at 2020-06-29 18:28:37 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 1.7ms | Allocations: 1064)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 8.7ms | Allocations: 3764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 1.3ms | Allocations: 13621)
+
+
+Started GET "/blogs" for ::1 at 2020-06-29 18:28:38 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 2.4ms | Allocations: 1064)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 9.4ms | Allocations: 3765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.9ms | Allocations: 13585)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/blogs" for ::1 at 2020-06-29 18:28:49 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 9.7ms | Allocations: 3037)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 41.9ms | Allocations: 12394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 1.7ms | Allocations: 453)
+  Rendered shared/_blog_masthead.html.erb (Duration: 1.1ms | Allocations: 143)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 1.1ms | Allocations: 244)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.9ms | Allocations: 102)
+Completed 200 OK in 234ms (Views: 185.3ms | ActiveRecord: 10.6ms | Allocations: 44178)
+
+
+Started GET "/blogs" for ::1 at 2020-06-29 18:28:50 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 4.4ms | Allocations: 1070)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 19.0ms | Allocations: 3780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.3ms | Allocations: 151)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 1.1ms | Allocations: 102)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 1.5ms | Allocations: 13615)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:28:51 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.2ms | Allocations: 1226)
+  Rendered shared/_application_footer.html.erb (Duration: 0.7ms | Allocations: 96)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.3ms | Allocations: 11213)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:28:51 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.9ms | Allocations: 1072)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 8757)
+
+
+Started GET "/about" for ::1 at 2020-06-29 18:28:52 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.3ms | Allocations: 1101)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms | Allocations: 8943)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-29 18:28:53 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 3.1ms | Allocations: 570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 3.0ms | Allocations: 1102)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 9414)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:28:54 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.1ms | Allocations: 1062)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 8732)
+
+
