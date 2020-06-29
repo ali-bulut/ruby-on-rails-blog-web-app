@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     # we can change page title variable everywhere. Because we defined it in application_controller. So every
     # controller can reach it. And here we are changing the default value so in blog index page the title
     # will be shown like down here.
