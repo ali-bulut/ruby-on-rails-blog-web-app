@@ -1,58 +1,56 @@
 <div class="col-sm-8 blog-main">
-    <%= render @blogs %>
-
-
+  <%= render @blogs %>
 
   <nav class="blog-pagination">
     <a class="btn btn-outline-primary" href="#">Older</a>
     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
   </nav>
 
-</div><!-- /.blog-main -->
+</div>
 
 
 
 <%# down here is comment. %>
 <% if false %>
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+  <h1>Blogs</h1>
 
-<table>
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Body</th>
-    <th colspan="4"></th>
-  </tr>
-  </thead>
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Body</th>
+      <th colspan="4"></th>
+    </tr>
+    </thead>
 
-  <tbody>
-  <%# here we dont need to pass partial view's location because rails understand that.
+    <tbody>
+    <%# here we dont need to pass partial view's location because rails understand that.
    Rails say here render @blogs then I should look the partial view whose name is blog(_blog) (and also the controller
    name should be blogs. So if everything is matching, then rails understand that.)
    And also we dont need to call each method inside of the blog partial view.
    So rails is doing all of these stuff instead of us.%>
-  <%= render @blogs %>
+    <%= render @blogs %>
 
-  <%# down here is comment we used before this for listing. But now we use below. %>
-  <% if false %>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog.id) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-      </tr>
+    <%# down here is comment we used before this for listing. But now we use below. %>
+    <% if false %>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= blog.title %></td>
+          <td><%= blog.body %></td>
+          <td><%= link_to blog.status, toggle_status_blog_path(blog.id) %></td>
+          <td><%= link_to 'Show', blog %></td>
+          <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+          <td><%= link_to 'Destroy', blog, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
     <% end %>
-  <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
-%>
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+  <br>
+  %>
+  <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
 <% end %>
