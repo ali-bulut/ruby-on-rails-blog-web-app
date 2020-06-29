@@ -17,5 +17,9 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 //= require jquery3
+//= require jquery
 //= require popper
 //= require bootstrap-sprockets
+//= require rails-ujs
+//= require turbolinks
+//= require_tree

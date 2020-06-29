@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -10,21 +12,28 @@
 </head>
 
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
 
 <%# we can define partial view like this. In partial views we have to write filename by starting _ but in defining
 we should write without _%>
 <%# and we can pass data to partial view like this. %>
-<%= render "shared/nav", location: "top" %>
+      <%#   <%= render "shared/nav", location: "top" %>
+      <%= render "shared/application_nav" %>
 
-<%# and here we can define view helper. The difference is generally we dont write inside of view helpers html.
-Generally we use helpers for razor operations.(like if else or case statements) %>
-<%= login_helper %>
+      <%= yield %>
 
-<%= yield %>
-<%= @copyright %>
+      <%= render "shared/application_footer" %>
+
 <%# and also we can pass parameters to view helpers %>
-<%= source_helper("application") %>
+      <%= source_helper("application") %>
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>

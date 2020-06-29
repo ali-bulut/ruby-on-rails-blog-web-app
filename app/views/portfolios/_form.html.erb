@@ -1,31 +1,38 @@
 <%= form_with(model: portfolio_item, local: true) do |form| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+      <div class="form-group">
+        <%= form.label :subtitle %>
+        <%= form.text_field :subtitle, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :body %>
+        <%= form.text_area :body, class: "form-control", rows:13 %>
+      </div>
+    </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
-  </div>
+  <hr>
+  <h2>Technologies Used:</h2>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <ul>
+  <div>
     <%# we wrote in controller 3.times for technologies that means this code will run for 3 times. %>
     <%= form.fields_for :techologies do |techology_form| %>
-      <li>
+      <div class="form-group">
         <%= techology_form.label :name %>
-        <%= techology_form.text_field :name %>
-      </li>
+        <%= techology_form.text_field :name, class: "form-control" %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary btn-block" %>
   </div>
 <% end %>
