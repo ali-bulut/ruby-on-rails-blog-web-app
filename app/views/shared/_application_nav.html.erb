@@ -1,12 +1,8 @@
 <div class="masthead clearfix">
   <div class="inner">
     <h3 class="masthead-brand">Ali Bulut</h3>
-    <nav class="nav nav-masthead">
-      <%= link_to "Home", root_path, class: "nav-link" %>
-      <%= link_to "About Me", about_path, class: "nav-link" %>
-      <%= link_to "Contact", contact_me_path, class: "nav-link" %>
-      <%= link_to "Blog", blogs_path, class: "nav-link" %>
-      <%= link_to "Portfolio", portfolios_path, class: "nav-link" %>
+    <nav class="nav nav-masthead app-nav">
+      <%= nav_helper("nav-link", "span") %>
 
       <%# and here we can define view helper. The difference is generally we dont write inside of view helpers html.
 Generally we use helpers for razor operations.(like if else or case statements) %>
