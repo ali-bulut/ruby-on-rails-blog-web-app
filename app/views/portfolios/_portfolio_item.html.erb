@@ -1,10 +1,19 @@
+<div class="card">
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+  <p class="card-text">
+    <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span>
+    <%= portfolio_item.subtitle %>
+  </p>
+</div>
+
 <%# we dont need to write .id ruby will understand that if we only write portfolio_item %>
 <%# portfolio.show is coming from routes file. We defined it by writing as. %>
+<% if false %>
 <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p>
 <p><%= portfolio_item.subtitle %></p>
 <p><%= portfolio_item.body %></p>
-<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %>
 <%# method: delete => by using that ruby understand when button clicked there will be no redirection. Just a delete operation. %>
 <%# default method is get. when we redirect to page after clicking we dont need to write method: get %>
 <%= link_to 'Remove', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+<% end %>
