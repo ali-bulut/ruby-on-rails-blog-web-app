@@ -26062,3 +26062,1291 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 1.0ms | Allocations: 11787)
 
 
+Started GET "/portfolio/17" for ::1 at 2020-06-30 19:20:50 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.4ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 17]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 4.2ms | Allocations: 2449)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.6ms | Allocations: 138)
+Completed 200 OK in 32ms (Views: 26.1ms | ActiveRecord: 1.2ms | Allocations: 13469)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:20:51 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [11 times] (Duration: 15.9ms | Allocations: 16401)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 20.6ms | Allocations: 18889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.8ms | Allocations: 27916)
+
+
+Started GET "/portfolios/new" for ::1 at 2020-06-30 19:20:54 +0300
+Processing by PortfoliosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/_form.html.erb (Duration: 2.6ms | Allocations: 1990)
+  Rendered portfolios/new.html.erb within layouts/portfolio (Duration: 3.7ms | Allocations: 2283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 149)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 11740)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "BlogApp_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "BlogApp_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "techologies" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "techologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_techologies_on_portfolio_id" ON "techologies"  ("portfolio_id")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "techologies" ADD CONSTRAINT "fk_rails_197f3395ed"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "f33e2f2fa6e729753280e0c93eed476e6aacbfee"], ["updated_at", "2020-06-30 16:35:42.494890"], ["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "techologies" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "techologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_techologies_on_portfolio_id" ON "techologies"  ("portfolio_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "techologies" ADD CONSTRAINT "fk_rails_197f3395ed"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200630112009)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200626142937),
+(20200628072853);
+
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-06-30 16:35:42.652140"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-30 16:35:42.661824"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "f33e2f2fa6e729753280e0c93eed476e6aacbfee"], ["updated_at", "2020-06-30 16:35:42.669403"], ["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.6ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2020-06-30 16:35:42.713950"], ["updated_at", "2020-06-30 16:35:42.713950"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.2ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2020-06-30 16:35:42.717503"], ["updated_at", "2020-06-30 16:35:42.717503"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.2ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2020-06-30 16:35:42.720194"], ["updated_at", "2020-06-30 16:35:42.720194"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 0"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.752993"], ["updated_at", "2020-06-30 16:35:42.752993"], ["slug", "my-blog-post-0"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 1"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.758639"], ["updated_at", "2020-06-30 16:35:42.758639"], ["slug", "my-blog-post-1"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 2"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.763686"], ["updated_at", "2020-06-30 16:35:42.763686"], ["slug", "my-blog-post-2"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 3"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.768597"], ["updated_at", "2020-06-30 16:35:42.768597"], ["slug", "my-blog-post-3"], ["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 4"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.773547"], ["updated_at", "2020-06-30 16:35:42.773547"], ["slug", "my-blog-post-4"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-5"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 5"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.778468"], ["updated_at", "2020-06-30 16:35:42.778468"], ["slug", "my-blog-post-5"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-6"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 6"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.783443"], ["updated_at", "2020-06-30 16:35:42.783443"], ["slug", "my-blog-post-6"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-7"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 7"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.788419"], ["updated_at", "2020-06-30 16:35:42.788419"], ["slug", "my-blog-post-7"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-8"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 8"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.793362"], ["updated_at", "2020-06-30 16:35:42.793362"], ["slug", "my-blog-post-8"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 9"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:35:42.798341"], ["updated_at", "2020-06-30 16:35:42.798341"], ["slug", "my-blog-post-9"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.7ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 0"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:35:42.809339"], ["updated_at", "2020-06-30 16:35:42.809339"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 1"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:35:42.813552"], ["updated_at", "2020-06-30 16:35:42.813552"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 2"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:35:42.816400"], ["updated_at", "2020-06-30 16:35:42.816400"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 3"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:35:42.819073"], ["updated_at", "2020-06-30 16:35:42.819073"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 4"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:35:42.821718"], ["updated_at", "2020-06-30 16:35:42.821718"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/portfolios/new" for ::1 at 2020-06-30 19:35:47 +0300
+Processing by PortfoliosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+Redirected to http://localhost:3000/
+Filter chain halted as #<Proc:0x00007fb24801b6c8 /Users/alibulut/.rvm/gems/ruby-2.7.1/gems/petergate-2.0.1/lib/petergate/action_controller/base.rb:46> rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 0.6ms | Allocations: 13184)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:35:47 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered shared/_application_footer.html.erb (Duration: 0.6ms | Allocations: 96)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 13495)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:35:48 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9604)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:35:49 +0300
+Processing by PortfoliosController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1667)
+
+
+  
+SyntaxError (/Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/app/models/portfolio.rb:38: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/portfolio.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/models/portfolio.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/models/portfolio.rb:38: syntax error, unexpected `end', expecting end-of-input
+app/controllers/portfolios_controller.rb:16:in `index'
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:14 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 6.0ms | Allocations: 1918)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.1ms | Allocations: 390)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 200)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 138)
+Completed 200 OK in 62ms (Views: 28.4ms | ActiveRecord: 7.8ms | Allocations: 25731)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:15 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.4ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 251)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 9641)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:16 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.7ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 9622)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:39 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 10886)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:39 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.6ms | Allocations: 274)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 9586)
+
+
+Started GET "/blogs" for ::1 at 2020-06-30 19:37:40 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 3.3ms | Allocations: 1552)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 24.2ms | Allocations: 10646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 1.0ms | Allocations: 366)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.5ms | Allocations: 244)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.4ms | Allocations: 101)
+Completed 200 OK in 498ms (Views: 493.2ms | ActiveRecord: 3.1ms | Allocations: 105778)
+
+
+Started GET "/blogs" for ::1 at 2020-06-30 19:37:40 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 2.0ms | Allocations: 1263)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 11.5ms | Allocations: 3969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.4ms | Allocations: 243)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms | Allocations: 13977)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:43 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 9624)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:43 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.6ms | Allocations: 274)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 10516)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:44 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.7ms | Allocations: 956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.6ms | Allocations: 256)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 9643)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:44 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.3ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 9634)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 9598)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:37:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.7ms | Allocations: 274)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 10268)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:48 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.9ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.0ms | Allocations: 240)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 9686)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:37:48 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.9ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.5ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 9604)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/portfolios" for ::1 at 2020-06-30 19:38:58 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 5.5ms | Allocations: 2112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.7ms | Allocations: 413)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 1.1ms | Allocations: 201)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.1ms | Allocations: 143)
+Completed 200 OK in 170ms (Views: 129.5ms | ActiveRecord: 5.2ms | Allocations: 39742)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:38:58 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.8ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 9675)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:38:59 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 1.7ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 9633)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "BlogApp_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "BlogApp_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "techologies" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "techologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_techologies_on_portfolio_id" ON "techologies"  ("portfolio_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "techologies" ADD CONSTRAINT "fk_rails_197f3395ed"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs"  ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "techologies" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "techologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_techologies_on_portfolio_id" ON "techologies"  ("portfolio_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "techologies" ADD CONSTRAINT "fk_rails_197f3395ed"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-06-30 16:41:47.124044"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-30 16:41:47.133446"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.6ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2020-06-30 16:41:47.185521"], ["updated_at", "2020-06-30 16:41:47.185521"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.2ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2020-06-30 16:41:47.189196"], ["updated_at", "2020-06-30 16:41:47.189196"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.2ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2020-06-30 16:41:47.191964"], ["updated_at", "2020-06-30 16:41:47.191964"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 0"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.224722"], ["updated_at", "2020-06-30 16:41:47.224722"], ["slug", "my-blog-post-0"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 1"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.230324"], ["updated_at", "2020-06-30 16:41:47.230324"], ["slug", "my-blog-post-1"], ["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 2"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.235211"], ["updated_at", "2020-06-30 16:41:47.235211"], ["slug", "my-blog-post-2"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 3"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.240121"], ["updated_at", "2020-06-30 16:41:47.240121"], ["slug", "my-blog-post-3"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 4"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.245240"], ["updated_at", "2020-06-30 16:41:47.245240"], ["slug", "my-blog-post-4"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-5"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 5"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.250257"], ["updated_at", "2020-06-30 16:41:47.250257"], ["slug", "my-blog-post-5"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-6"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 6"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.255186"], ["updated_at", "2020-06-30 16:41:47.255186"], ["slug", "my-blog-post-6"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-7"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 7"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.260078"], ["updated_at", "2020-06-30 16:41:47.260078"], ["slug", "my-blog-post-7"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-8"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 8"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.265053"], ["updated_at", "2020-06-30 16:41:47.265053"], ["slug", "my-blog-post-8"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My blog post 9"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2020-06-30 16:41:47.270031"], ["updated_at", "2020-06-30 16:41:47.270031"], ["slug", "my-blog-post-9"], ["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.4ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 0"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:41:47.279083"], ["updated_at", "2020-06-30 16:41:47.279083"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 1"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:41:47.282376"], ["updated_at", "2020-06-30 16:41:47.282376"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.1ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 2"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:41:47.285063"], ["updated_at", "2020-06-30 16:41:47.285063"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 3"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:41:47.287645"], ["updated_at", "2020-06-30 16:41:47.287645"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 4"], ["percent_utilized", 15], ["created_at", "2020-06-30 16:41:47.290435"], ["updated_at", "2020-06-30 16:41:47.290435"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 0"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.306500"], ["updated_at", "2020-06-30 16:41:47.306500"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 1"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.310500"], ["updated_at", "2020-06-30 16:41:47.310500"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 2"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.313715"], ["updated_at", "2020-06-30 16:41:47.313715"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 3"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.317131"], ["updated_at", "2020-06-30 16:41:47.317131"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 4"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.320499"], ["updated_at", "2020-06-30 16:41:47.320499"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 5"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.324523"], ["updated_at", "2020-06-30 16:41:47.324523"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 6"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.328067"], ["updated_at", "2020-06-30 16:41:47.328067"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 7"], ["subtitle", "Ruby on Rails"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.331533"], ["updated_at", "2020-06-30 16:41:47.331533"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (0.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title: 0"], ["subtitle", "Angular"], ["body", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2020-06-30 16:41:47.334702"], ["updated_at", "2020-06-30 16:41:47.334702"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechology Create (0.6ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 0"], ["portfolio_id", 9], ["created_at", "2020-06-30 16:41:47.353707"], ["updated_at", "2020-06-30 16:41:47.353707"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechology Create (0.2ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 1"], ["portfolio_id", 9], ["created_at", "2020-06-30 16:41:47.359047"], ["updated_at", "2020-06-30 16:41:47.359047"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechology Create (0.2ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 2"], ["portfolio_id", 9], ["created_at", "2020-06-30 16:41:47.368480"], ["updated_at", "2020-06-30 16:41:47.368480"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/portfolios" for ::1 at 2020-06-30 19:41:58 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 9.3ms | Allocations: 1015)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 37.2ms | Allocations: 6558)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 243)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 80ms (Views: 71.5ms | ActiveRecord: 3.0ms | Allocations: 15248)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:42:11 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.4ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 6.2ms | Allocations: 1763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.3ms | Allocations: 10426)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:43:55 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.2ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.5ms | Allocations: 1763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 10421)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:43:56 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.8ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.5ms | Allocations: 1773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 10434)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:43:56 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.9ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.8ms | Allocations: 1763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 10428)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:43:56 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.8ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.4ms | Allocations: 1766)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 10427)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:43:58 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.8ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.4ms | Allocations: 1763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 10420)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:44:00 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 1.2ms | Allocations: 428)
+  Rendered shared/_application_footer.html.erb (Duration: 0.6ms | Allocations: 96)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 13617)
+
+
+Started GET "/about" for ::1 at 2020-06-30 19:44:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.4ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 10398)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-30 19:44:05 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 2.9ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 299)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 10272)
+
+
+Started GET "/about" for ::1 at 2020-06-30 19:44:07 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.6ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.6ms | Allocations: 283)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 10103)
+
+
+Started GET "/" for ::1 at 2020-06-30 19:44:10 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 9584)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-30 19:44:11 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_application_nav.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 9554)
+
+
+Started GET "/blogs" for ::1 at 2020-06-30 19:44:12 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 10.0ms | Allocations: 3287)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 37.1ms | Allocations: 12447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 1.1ms | Allocations: 365)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.4ms | Allocations: 101)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 5.1ms | Allocations: 24508)
+
+
+Started GET "/blogs" for ::1 at 2020-06-30 19:44:12 +0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 2.7ms | Allocations: 1263)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 10.4ms | Allocations: 3969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.4ms | Allocations: 243)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 2.0ms | Allocations: 13863)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:44:13 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.8ms | Allocations: 705)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.6ms | Allocations: 1774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 243)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 10446)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:44:13 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.8ms | Allocations: 698)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.4ms | Allocations: 1763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 231)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 10426)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:47:05 +0300
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.6ms | Allocations: 982)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 4.8ms | Allocations: 2512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.1ms | Allocations: 377)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 190)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.5ms | Allocations: 138)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.4ms | Allocations: 12661)
+
+
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:07 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 341.6ms | Allocations: 217778)
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 0.2ms | Allocations: 222107)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f6876838>:0x00007f84ee4eaa78>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:17 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 332.0ms | Allocations: 217296)
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 0.4ms | Allocations: 218772)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f6876838>:0x00007f84f55071d0>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:18 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 273.3ms | Allocations: 217286)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.3ms | Allocations: 218713)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f6876838>:0x00007f84efd82bf8>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:20 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 268.5ms | Allocations: 217286)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.2ms | Allocations: 218713)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f6876838>:0x00007f84f5588a00>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:40 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 261.9ms | Allocations: 217468)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.2ms | Allocations: 219351)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f549c678>:0x00007f84f5476b80>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:42 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 270.9ms | Allocations: 217261)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.2ms | Allocations: 218688)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f549c678>:0x00007f84f54739a8>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:42 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 256.1ms | Allocations: 217261)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.2ms | Allocations: 218687)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<#<Class:0x00007f84f549c678>:0x00007f84f54deb90>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:47:47 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 11.0ms | Allocations: 5110)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 6983)
+
+
+  
+ActionView::Template::Error (The asset "<img width=\"100%\" src=\"https://via.placeholder.com/600x400\" />" is not present in the asset pipeline.):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(@portfolio_item.main_image.url, "main"), width: '100%' %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:01 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 3.0ms | Allocations: 3971)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 5845)
+
+
+  
+ActionView::Template::Error (The asset "<img src=\"https://via.placeholder.com/600x400\" />" is not present in the asset pipeline.):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(@portfolio_item.main_image.url, "main") %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:01 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 2.0ms | Allocations: 3765)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 5192)
+
+
+  
+ActionView::Template::Error (The asset "<img src=\"https://via.placeholder.com/600x400\" />" is not present in the asset pipeline.):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(@portfolio_item.main_image.url, "main") %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:02 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 2.0ms | Allocations: 3765)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 5191)
+
+
+  
+ActionView::Template::Error (The asset "<img src=\"https://via.placeholder.com/600x400\" />" is not present in the asset pipeline.):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(@portfolio_item.main_image.url, "main") %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:03 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 2.2ms | Allocations: 3765)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 5191)
+
+
+  
+ActionView::Template::Error (The asset "<img src=\"https://via.placeholder.com/600x400\" />" is not present in the asset pipeline.):
+    1: <div class="container portfolio-container">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:       <%= image_tag image_tag portfolio_img(@portfolio_item.main_image.url, "main") %>
+    5:     </div>
+    6:     <div class="col-md-5">
+    7:       <h1><%= @portfolio_item.title %></h1>
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:09 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.3ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 17.3ms | Allocations: 6371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.7ms | Allocations: 385)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 138)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 1.5ms | Allocations: 17102)
+
+
+Started GET "/portfolio/1" for ::1 at 2020-06-30 19:48:09 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.2ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 1.4ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 10035)
+
+
