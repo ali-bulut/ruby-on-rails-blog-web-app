@@ -25941,3 +25941,124 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 1716ms (Views: 1709.9ms | ActiveRecord: 1.0ms | Allocations: 86272)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/portfolio/16" for ::1 at 2020-06-30 19:13:37 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (1.8ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 16]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 22.7ms | Allocations: 8846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.0ms | Allocations: 500)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.6ms | Allocations: 143)
+Completed 200 OK in 1720ms (Views: 1662.1ms | ActiveRecord: 11.1ms | Allocations: 146095)
+
+
+Started GET "/portfolio/add" for ::1 at 2020-06-30 19:13:45 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"add"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1229)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Portfolio with 'id'=add):
+  
+app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+Started GET "/portfolio/new" for ::1 at 2020-06-30 19:13:48 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1251)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Portfolio with 'id'=new):
+  
+app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+Started GET "/portfolios/new" for ::1 at 2020-06-30 19:13:51 +0300
+Processing by PortfoliosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/_form.html.erb (Duration: 9.3ms | Allocations: 4510)
+  Rendered portfolios/new.html.erb within layouts/portfolio (Duration: 10.6ms | Allocations: 4806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 149)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 34ms (Views: 27.4ms | ActiveRecord: 0.3ms | Allocations: 14573)
+
+
+Started POST "/portfolios" for ::1 at 2020-06-30 19:14:10 +0300
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"Ovp91cIGlJEroyCc1/q0ilUF2wFuSQ9c2mJK/gkMKYCFDNxmHMJmQmVul7tHVXkfnnt8BYRSi9+Igf7mhtFE6w==", "portfolio"=>{"title"=>"test", "subtitle"=>"testtt", "main_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb242d982e8 @tempfile=#<Tempfile:/var/folders/jk/h89glnqn0nb62l0kc8x7sbt80000gn/T/RackMultipart20200630-18955-7kjn25.png>, @original_filename="Screen Shot 2020-06-28 at 17.20.10.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"portfolio[main_image]\"; filename=\"Screen Shot 2020-06-28 at 17.20.10.png\"\r\nContent-Type: image/png\r\n">, "thumb_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb242d98270 @tempfile=#<Tempfile:/var/folders/jk/h89glnqn0nb62l0kc8x7sbt80000gn/T/RackMultipart20200630-18955-1lvb24o.png>, @original_filename="Screen Shot 2020-06-28 at 17.24.50.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"portfolio[thumb_image]\"; filename=\"Screen Shot 2020-06-28 at 17.24.50.png\"\r\nContent-Type: image/png\r\n">, "body"=>"tteestt", "techologies_attributes"=>{"0"=>{"name"=>"Ruby"}, "1"=>{"name"=>"Ruby"}, "2"=>{"name"=>"Ruby"}}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+  [1m[36mPortfolio Create (2.0ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["subtitle", "testtt"], ["body", "tteestt"], ["main_image", "Screen_Shot_2020-06-28_at_17.20.10.png"], ["thumb_image", "Screen_Shot_2020-06-28_at_17.24.50.png"], ["created_at", "2020-06-30 16:14:14.481740"], ["updated_at", "2020-06-30 16:14:14.481740"]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+  [1m[36mTechology Create (0.8ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 17], ["created_at", "2020-06-30 16:14:14.486308"], ["updated_at", "2020-06-30 16:14:14.486308"]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+  [1m[36mTechology Create (0.2ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 17], ["created_at", "2020-06-30 16:14:14.488333"], ["updated_at", "2020-06-30 16:14:14.488333"]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+  [1m[36mTechology Create (0.4ms)[0m  [1m[32mINSERT INTO "techologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 17], ["created_at", "2020-06-30 16:14:14.489588"], ["updated_at", "2020-06-30 16:14:14.489588"]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:44:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 5825ms (ActiveRecord: 5.2ms | Allocations: 28442)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 19:14:16 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [11 times] (Duration: 13.7ms | Allocations: 16409)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 17.1ms | Allocations: 18914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.5ms | Allocations: 27920)
+
+
+Started GET "/portfolio/17" for ::1 at 2020-06-30 19:14:27 +0300
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:81:in `set_portfolio_item'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechology Load (0.2ms)[0m  [1m[34mSELECT "techologies".* FROM "techologies" WHERE "techologies"."portfolio_id" = $1[0m  [["portfolio_id", 17]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 3.7ms | Allocations: 2241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 148)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 1.0ms | Allocations: 11787)
+
+
