@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+require("custom/html.sortable")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")

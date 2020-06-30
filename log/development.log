@@ -13234,3 +13234,219 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 10246)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-30 14:35:15 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 6.1ms | Allocations: 1546)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 59f5b6ca9207e967dbe2
+Version: webpack 4.43.0
+Time: 1138ms
+Built at: 06/30/2020 2:35:18 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-709b0b735ad3c12ca279.js    146 KiB  application  [emitted] [immutable]  application
+js/application-709b0b735ad3c12ca279.js.map    167 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-709b0b735ad3c12ca279.js js/application-709b0b735ad3c12ca279.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/custom/html.sortable.js] 20.8 KiB {application} [built]
+[./app/javascript/packs/application.js] 924 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 3468ms (Views: 3453.3ms | ActiveRecord: 1.4ms | Allocations: 11707)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:36:27 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.5ms | Allocations: 1502)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: c6f2271329692050d432
+Version: webpack 4.43.0
+Time: 898ms
+Built at: 06/30/2020 2:36:30 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-24277bfcaef6a5c82600.js    146 KiB  application  [emitted] [immutable]  application
+js/application-24277bfcaef6a5c82600.js.map    167 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-24277bfcaef6a5c82600.js js/application-24277bfcaef6a5c82600.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/custom/html.sortable.js] 20.8 KiB {application} [built]
+[./app/javascript/packs/application.js] 924 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 2700ms (Views: 2697.0ms | ActiveRecord: 0.5ms | Allocations: 11388)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:36:32 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.8ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.8ms | Allocations: 10241)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:36:40 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.9ms | Allocations: 1502)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 55ffc2c5476ead506ff6
+Version: webpack 4.43.0
+Time: 619ms
+Built at: 06/30/2020 2:36:42 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4a264d0578c119fea5a7.js    146 KiB  application  [emitted] [immutable]  application
+js/application-4a264d0578c119fea5a7.js.map    167 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4a264d0578c119fea5a7.js js/application-4a264d0578c119fea5a7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/custom/html.sortable.js] 20.8 KiB {application} [built]
+[./app/javascript/packs/application.js] 921 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.4ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 1706ms (Views: 1703.1ms | ActiveRecord: 0.6ms | Allocations: 11389)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:36:43 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.9ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.6ms | Allocations: 10242)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/portfolios" for ::1 at 2020-06-30 14:45:02 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.7ms | Allocations: 746)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 13.8ms | Allocations: 7359)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 8f5177a81a3e99ab3414
+Version: webpack 4.43.0
+Time: 1087ms
+Built at: 06/30/2020 2:45:08 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-57cb90ce58d2cc735ca2.js    146 KiB  application  [emitted] [immutable]  application
+js/application-57cb90ce58d2cc735ca2.js.map    167 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-57cb90ce58d2cc735ca2.js js/application-57cb90ce58d2cc735ca2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/custom/html.sortable.js] 20.8 KiB {application} [built]
+[./app/javascript/packs/application.js] 918 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.1ms | Allocations: 475)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.0ms | Allocations: 143)
+Completed 200 OK in 5887ms (Views: 5841.0ms | ActiveRecord: 11.8ms | Allocations: 173776)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:45:17 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.9ms | Allocations: 438)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.8ms | Allocations: 1504)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 730be88b5c342cbaefa3
+Version: webpack 4.43.0
+Time: 1039ms
+Built at: 06/30/2020 2:45:20 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-800e4022dce96ae24bdd.js    146 KiB  application  [emitted] [immutable]  application
+js/application-800e4022dce96ae24bdd.js.map    167 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-800e4022dce96ae24bdd.js js/application-800e4022dce96ae24bdd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/custom/html.sortable.js] 20.8 KiB {application} [built]
+[./app/javascript/packs/application.js] 918 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 150)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 2824ms (Views: 2821.5ms | ActiveRecord: 0.5ms | Allocations: 11486)
+
+
