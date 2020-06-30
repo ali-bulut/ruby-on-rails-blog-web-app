@@ -12836,3 +12836,401 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 1.0ms | Allocations: 13567)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-06-29 18:30:19 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 19.5ms | Allocations: 7651)
+  Rendered shared/_application_footer.html.erb (Duration: 0.8ms | Allocations: 96)
+Completed 200 OK in 173ms (Views: 153.1ms | ActiveRecord: 3.9ms | Allocations: 35552)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:30:20 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 4.4ms | Allocations: 1082)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.3ms | Allocations: 8802)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:30:21 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 7.1ms | Allocations: 1072)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.3ms | Allocations: 8769)
+
+
+Started GET "/" for ::1 at 2020-06-29 18:30:21 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 5.5ms | Allocations: 1063)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.6ms | Allocations: 8747)
+
+
+Started GET "/about" for ::1 at 2020-06-29 18:30:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.6ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.0ms | Allocations: 1102)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms | Allocations: 9035)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-29 18:30:22 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 2.2ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.2ms | Allocations: 1086)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 9426)
+
+
+Started GET "/blogs" for ::1 at 2020-06-29 18:30:22 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 7.0ms | Allocations: 3018)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 35.2ms | Allocations: 12265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 1.0ms | Allocations: 274)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.8ms | Allocations: 244)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.7ms | Allocations: 101)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 4.2ms | Allocations: 24215)
+
+
+Started GET "/blogs" for ::1 at 2020-06-29 18:30:23 +0300
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 1.6ms | Allocations: 1070)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 5.9ms | Allocations: 3776)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_blog_nav.html.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_blog_sidebar.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.6ms | Allocations: 13588)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-29 18:30:24 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 5.0ms | Allocations: 718)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 20.4ms | Allocations: 6506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.3ms | Allocations: 291)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.7ms | Allocations: 143)
+Completed 200 OK in 49ms (Views: 38.1ms | ActiveRecord: 3.7ms | Allocations: 17875)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-29 18:30:24 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.9ms | Allocations: 438)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.0ms | Allocations: 1495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 150)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.0ms | Allocations: 26)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 10222)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/portfolios" for ::1 at 2020-06-29 21:48:41 +0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.6ms | Allocations: 746)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 15.2ms | Allocations: 6755)
+Started GET "/portfolios" for ::1 at 2020-06-29 21:48:41 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.0ms | Allocations: 442)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 4.6ms | Allocations: 1768)
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 117ddf6b34856997ac7f
+Version: webpack 4.43.0
+Time: 928ms
+Built at: 06/29/2020 9:48:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-fa1573e03506e1b78c64.js    124 KiB  application  [emitted] [immutable]  application
+js/application-fa1573e03506e1b78c64.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-fa1573e03506e1b78c64.js js/application-fa1573e03506e1b78c64.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 884 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Compiled all packs in /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/public/packs
+[Webpacker] Hash: 117ddf6b34856997ac7f
+Version: webpack 4.43.0
+Time: 932ms
+Built at: 06/29/2020 9:48:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-fa1573e03506e1b78c64.js    124 KiB  application  [emitted] [immutable]  application
+js/application-fa1573e03506e1b78c64.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-fa1573e03506e1b78c64.js js/application-fa1573e03506e1b78c64.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 884 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.4ms | Allocations: 860)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.5ms | Allocations: 626)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.7ms | Allocations: 173)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.8ms | Allocations: 182)
+Completed 200 OK in 2511ms (Views: 2494.7ms | ActiveRecord: 11.8ms | Allocations: 20962)
+
+
+Completed 200 OK in 2631ms (Views: 2600.7ms | ActiveRecord: 7.3ms | Allocations: 52633)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6045777927375424770)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToPortfolios (20200630112009)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mALTER TABLE "portfolios" ADD "position" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200630112009"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6045777927375424770)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/portfolios" for ::1 at 2020-06-30 14:22:45 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.8ms | Allocations: 746)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 19.8ms | Allocations: 7359)
+Started GET "/portfolios" for ::1 at 2020-06-30 14:22:46 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.1ms | Allocations: 442)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 5.4ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.4ms | Allocations: 473)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.8ms | Allocations: 143)
+Completed 200 OK in 257ms (Views: 217.1ms | ActiveRecord: 8.5ms | Allocations: 57384)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.8ms | Allocations: 150)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 1.9ms | Allocations: 26978)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:24:26 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 446)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 12.7ms | Allocations: 6223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.2ms | Allocations: 320)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 58ms (Views: 28.9ms | ActiveRecord: 10.2ms | Allocations: 22436)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:24:26 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.6ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.5ms | Allocations: 10235)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:24:26 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.6ms | Allocations: 1503)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 10259)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:24:27 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.7ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 2.7ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.6ms | Allocations: 10234)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-30 14:24:27 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 0.9ms | Allocations: 437)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.1ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 10246)
+
+

@@ -13,6 +13,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: "Angular")
   end
 
+  def self.by_position
+    order("position ASC")
+  end
+
   # both of them are same. And we can reach from controller in a same way.
   scope :ruby_on_rails_portfolio_items, -> {where(subtitle: "Ruby on Rails")}
 

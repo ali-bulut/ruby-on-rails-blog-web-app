@@ -9,7 +9,11 @@ class PortfoliosController < ApplicationController
     # without writing any query.
     # @portfolio_items = Portfolio.angular
     # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items
-    @portfolio_items = Portfolio.all
+    # @portfolio_items = Portfolio.all
+    # 
+    # that means portfolio items will be ordered by position field in database as ascending.
+    # @portfolio_items = Portfolio.order("position ASC")
+     @portfolio_items = Portfolio.by_position 
   end
 
   def angular
