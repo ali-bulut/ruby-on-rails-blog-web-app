@@ -14762,3 +14762,544 @@ ActionView::MissingTemplate (Missing template portfolios/sort, application/sort 
 ):
   
 app/controllers/portfolios_controller.rb:26:in `sort'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-06-30 17:18:13 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 288)
+Started GET "/" for ::1 at 2020-06-30 17:18:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Started GET "/" for ::1 at 2020-06-30 17:18:18 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+Completed 500 Internal Server Error in 4717ms (ActiveRecord: 0.0ms | Allocations: 497310)
+
+
+  
+ActionView::Template::Error (Asset `HardDrivePhotojpeg.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link HardDrivePhotojpeg.mp4
+and restart your server):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Completed 500 Internal Server Error in 4811ms (ActiveRecord: 0.0ms | Allocations: 838411)
+
+
+  
+ActionView::Template::Error (Asset `HardDrivePhotojpeg.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link HardDrivePhotojpeg.mp4
+and restart your server):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 521ms (ActiveRecord: 0.0ms | Allocations: 772864)
+
+
+  
+ActionView::Template::Error (Asset `HardDrivePhotojpeg.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link HardDrivePhotojpeg.mp4
+and restart your server):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-06-30 17:19:48 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 30.1ms | Allocations: 7653)
+  Rendered shared/_application_footer.html.erb (Duration: 0.7ms | Allocations: 96)
+Completed 200 OK in 238ms (Views: 216.3ms | ActiveRecord: 4.5ms | Allocations: 48405)
+
+
+Started GET "/about" for ::1 at 2020-06-30 17:20:07 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.3ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 3.3ms | Allocations: 1102)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms | Allocations: 11193)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-30 17:20:08 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 4.3ms | Allocations: 596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.9ms | Allocations: 1101)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.4ms | Allocations: 11122)
+
+
+Started GET "/about" for ::1 at 2020-06-30 17:20:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.2ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 1.9ms | Allocations: 1071)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms | Allocations: 10902)
+
+
+Started GET "/" for ::1 at 2020-06-30 17:20:10 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 3.1ms | Allocations: 1072)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 10409)
+
+
+Started GET "/" for ::1 at 2020-06-30 17:21:08 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 1607ms (ActiveRecord: 0.0ms | Allocations: 96842)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:11 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 12307)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:12 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 12247)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:12 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 12245)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:12 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 31570)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 39046)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 48098)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+Started GET "/" for ::1 at 2020-06-30 17:21:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 54669)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.0ms | Allocations: 349044)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:23 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 12243)
+
+
+  
+ActionView::Template::Error (The asset "home-bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:24 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 13650)
+
+
+  
+ActionView::Template::Error (The asset "home_bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:24 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 48)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 12274)
+
+
+  
+ActionView::Template::Error (The asset "home_bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:25 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 38226)
+
+
+  
+ActionView::Template::Error (The asset "home_bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:25 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 60619)
+
+
+  
+ActionView::Template::Error (The asset "home_bg.jpeg" is not present in the asset pipeline.):
+    18: 
+    19:     <div class="cover-container">
+    20: 
+    21:     <%= video_tag(
+    22:             'HardDrivePhotojpeg.mp4',
+    23:             id: 'background',
+    24:             autoplay: true,
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for ::1 at 2020-06-30 17:21:31 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 4.2ms | Allocations: 1368)
+  Rendered shared/_application_footer.html.erb (Duration: 0.7ms | Allocations: 93)
+Completed 200 OK in 954ms (Views: 951.9ms | ActiveRecord: 0.6ms | Allocations: 112153)
+
+
+Started GET "/images/bg-image.jpg" for ::1 at 2020-06-30 17:21:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/images/bg-image.jpg"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2020-06-30 17:21:35 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.5ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.4ms | Allocations: 1086)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.3ms | Allocations: 10988)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-30 17:21:36 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 1.9ms | Allocations: 1086)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms | Allocations: 10432)
+
+
+Started GET "/" for ::1 at 2020-06-30 17:21:36 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 1.7ms | Allocations: 1062)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 10201)
+
+
+Started GET "/about" for ::1 at 2020-06-30 17:21:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.2ms | Allocations: 727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.3ms | Allocations: 1071)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.3ms | Allocations: 10742)
+
+
+Started GET "/contact-me" for ::1 at 2020-06-30 17:21:38 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.6ms | Allocations: 1071)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms | Allocations: 10163)
+
+
+Started GET "/" for ::1 at 2020-06-30 17:21:40 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 2.0ms | Allocations: 1062)
+  Rendered shared/_application_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms | Allocations: 10196)
+
+
