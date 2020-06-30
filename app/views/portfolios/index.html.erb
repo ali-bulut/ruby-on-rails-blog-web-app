@@ -1,7 +1,7 @@
 <div class="album text-muted">
   <div class="container">
 
-    <div class="row sortable">
+    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
 
     <%# here controller name and variable name are not matching. So rails cannot understand like blogs.
     So here we should change our code a bit. And we dont need to change our code from partialView.

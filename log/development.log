@@ -14699,3 +14699,66 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 10378)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-30 16:32:59 +0300
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:10
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 1.1ms | Allocations: 455)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 3.2ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 26)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.5ms | Allocations: 10372)
+
+
+Started PUT "/portfolios/sort" for ::1 at 2020-06-30 16:33:01 +0300
+Processing by PortfoliosController#sort as */*
+  Parameters: {"order"=>{"0"=>{"id"=>"4", "position"=>"1"}, "1"=>{"id"=>"3", "position"=>"2"}, "2"=>{"id"=>"5", "position"=>"3"}, "3"=>{"id"=>"10", "position"=>"4"}, "4"=>{"id"=>"8", "position"=>"5"}, "5"=>{"id"=>"6", "position"=>"6"}, "6"=>{"id"=>"2", "position"=>"7"}, "7"=>{"id"=>"9", "position"=>"8"}, "8"=>{"id"=>"7", "position"=>"9"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:11:in `current_user'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Update (0.3ms)[0m  [1m[33mUPDATE "portfolios" SET "position" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["position", 2], ["updated_at", "2020-06-30 13:33:01.552848"], ["id", 3]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Update (0.3ms)[0m  [1m[33mUPDATE "portfolios" SET "position" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["position", 3], ["updated_at", "2020-06-30 13:33:01.557403"], ["id", 5]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+  [1m[36mPortfolio Load (0.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in sort'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.5ms | Allocations: 13453)
+
+
+  
+ActionView::MissingTemplate (Missing template portfolios/sort, application/sort with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/alibulut/Workspace/Ruby on Rails/ruby-on-rails-blog-web-app/app/views"
+  * "/Users/alibulut/.rvm/gems/ruby-2.7.1/gems/kaminari-core-1.2.1/app/views"
+  * "/Users/alibulut/.rvm/gems/ruby-2.7.1/gems/devise-4.7.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/alibulut/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+  
+app/controllers/portfolios_controller.rb:26:in `sort'
