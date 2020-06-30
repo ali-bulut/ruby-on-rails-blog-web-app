@@ -16,6 +16,16 @@ class PortfoliosController < ApplicationController
      @portfolio_items = Portfolio.by_position 
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    # by writing this we are telling rails, dont look for view for this controller, here we are just communicating
+    # with database.
+    render nothing: true
+  end
+
   def angular
     @angular_portfolio_items = Portfolio.angular
   end

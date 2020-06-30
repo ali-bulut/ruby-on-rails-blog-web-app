@@ -1,4 +1,5 @@
 const { environment } = require('@rails/webpacker')
+const coffee =  require('./loaders/coffee')
 
 const webpack = require('webpack')
 
@@ -14,4 +15,5 @@ const aliasConfig = {
 
 environment.config.set('resolve.alias', aliasConfig)
 
+environment.loaders.prepend('coffee', coffee)
 module.exports = environment

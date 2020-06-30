@@ -5,14 +5,9 @@
 
 import 'jquery-ui'
 
-$(
-    () => {
-        $('.sortable').sortable()
-    }
-)
-
 require("@rails/ujs").start()
 require("custom/html.sortable")
+require("./portfolios")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
