@@ -2,14 +2,28 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only:[:edit, :update, :show, :destroy]
   layout "portfolio"
 
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status, :sort]}, site_admin: :all
 
   def index
     # we can reach angular method from portfolio model. We created a query from there and we can reach from here
     # without writing any query.
     # @portfolio_items = Portfolio.angular
     # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items
-    @portfolio_items = Portfolio.all
+    # @portfolio_items = Portfolio.all
+    # 
+    # that means portfolio items will be ordered by position field in database as ascending.
+    # @portfolio_items = Portfolio.order("position ASC")
+     @portfolio_items = Portfolio.by_position 
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    # by writing this we are telling rails, dont look for view for this controller, here we are just communicating
+    # with database.
+    render nothing: true
   end
 
   def angular

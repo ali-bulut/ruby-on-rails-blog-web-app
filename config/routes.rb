@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   # resources. But if we have simple pages for only showing (like about or contact pages) we can simply use get.
 
   # that means use default routes for portfolios except show route.
-  resources :portfolios, except: [:show]
+  # we can add custom routes by using do end block. Here we created a new put route which name is sort(we should define
+  # as sort also in controller.)
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   # so we can create a custom route for show. as => we can set the prefix(route method) of show route.
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   get 'angular-items', to: 'portfolios#angular'
