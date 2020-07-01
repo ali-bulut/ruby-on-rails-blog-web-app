@@ -1,0 +1,12 @@
+<%# by using flash we can reach variables which is defined in controller. (like notice) alert and error variables
+is coming from gritter gem.%>
+<%# doesnt work in rails 6 %>
+<% if false %>
+<% if flash[:alert] %>
+  <%= js add_gritter(flash[:alert], title: "Ali Bulut Blog", sticky:false) %>
+<% elsif flash[:error] %>
+  <%= js add_gritter(flash[:error], title: "Ali Bulut Blog", sticky:false) %>
+<% else %>
+  <%= js add_gritter(flash[:notice], title: "Ali Bulut Blog", sticky:false) %>
+<% end %>
+<% end %>

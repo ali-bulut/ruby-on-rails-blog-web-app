@@ -4,8 +4,10 @@
 // that code so it'll be compiled.
 
 import 'jquery-ui'
+import 'cocoon-js';
 import "cocoon";
 
+require("jquery");
 require("@rails/ujs").start()
 require("custom/html.sortable")
 require("./portfolios")
@@ -24,6 +26,7 @@ require("channels")
 //= require jquery
 //= require jquery_ujs
 //= require cocoon
+//= require gritter
 //= require turbolinks
 //= require popper
 //= require bootstrap-sprockets

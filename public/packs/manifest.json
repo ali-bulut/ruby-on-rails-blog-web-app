@@ -1,24 +1,24 @@
 {
-  "application.js": "/packs/js/application-3a79463f1e4bb5c26aaf.js",
-  "application.js.map": "/packs/js/application-3a79463f1e4bb5c26aaf.js.map",
+  "application.js": "/packs/js/application-5bf11a177dabfa28c1f4.js",
+  "application.js.map": "/packs/js/application-5bf11a177dabfa28c1f4.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-3a79463f1e4bb5c26aaf.js"
+        "/packs/js/application-5bf11a177dabfa28c1f4.js"
       ],
       "js.map": [
-        "/packs/js/application-3a79463f1e4bb5c26aaf.js.map"
+        "/packs/js/application-5bf11a177dabfa28c1f4.js.map"
       ]
     },
     "portfolios": {
       "js": [
-        "/packs/js/portfolios-4abeee3590533d9eb4a0.js"
+        "/packs/js/portfolios-51731faa30cb492d0232.js"
       ],
       "js.map": [
-        "/packs/js/portfolios-4abeee3590533d9eb4a0.js.map"
+        "/packs/js/portfolios-51731faa30cb492d0232.js.map"
       ]
     }
   },
-  "portfolios.js": "/packs/js/portfolios-4abeee3590533d9eb4a0.js",
-  "portfolios.js.map": "/packs/js/portfolios-4abeee3590533d9eb4a0.js.map"
+  "portfolios.js": "/packs/js/portfolios-51731faa30cb492d0232.js",
+  "portfolios.js.map": "/packs/js/portfolios-51731faa30cb492d0232.js.map"
 }
