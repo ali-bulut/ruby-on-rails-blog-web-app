@@ -5,7 +5,7 @@ class Portfolio < ApplicationRecord
   # after that query, we will have one more portolio, and 3 more technologies. That means if we write bottom code
   # we can create new techologies inside of the Portfolio query.
   # that means => do not accept technologies if name attr of technology is empty (this is just a validation.)
-  accepts_nested_attributes_for :techologies, reject_if: lambda { |attrs| attrs["name"].blank? }
+  accepts_nested_attributes_for :techologies, allow_destroy:true, reject_if: lambda { |attrs| attrs["name"].blank? }
   #include Placeholder
   validates_presence_of :title, :body
 

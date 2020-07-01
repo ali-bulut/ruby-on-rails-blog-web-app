@@ -4,8 +4,8 @@ set_positions = undefined
 set_positions = ->
   $('.card').each (i) ->
     $(this).attr 'data-pos', i+1
-    return
-   return
+return
+return
 
 ready = ->
   set_positions()
