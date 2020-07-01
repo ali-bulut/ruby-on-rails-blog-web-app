@@ -37,13 +37,14 @@
   <h2>Technologies Used:</h2>
 
   <div>
-    <%# we wrote in controller 3.times for technologies that means this code will run for 3 times. %>
     <%= form.fields_for :techologies do |techology_form| %>
-      <div class="form-group">
-        <%= techology_form.label :name %>
-        <%= techology_form.text_field :name, class: "form-control" %>
-      </div>
+      <%= render 'portfolios/techology_fields', f: techology_form %>
     <% end %>
+    <div>
+      <%# special keyword that is coming from cocoon gem. Whenever we press this Add Techology field it will
+      create a new technology inside of a model so up here will map this.%>
+      <%= link_to_add_association 'Add Technology', form, :techologies %>
+    </div>
   </div>
 
   <div class="form-group">

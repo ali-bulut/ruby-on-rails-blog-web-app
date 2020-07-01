@@ -12,16 +12,43 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Blog Title" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :body %>
-    <%= form.text_area :body, class: "form-control", rows: 15 %>
+    <%= form.text_area :body, class: "form-control", rows: 15, placeholder: "Blog Content" %>
   </div>
 
   <div class="form-group">
     <%= form.submit "Submit ", class: "btn btn-primary" %>
   </div>
+<% end %>
+
+
+<%# if we dont want to communicate directly with model generally we dont use form_tag because it is not very handy.
+That means if we want to create or edit something we should use form_with. So if we dont have model and still
+we want to create a form we should use form_tag%>
+
+<%# UPDATE
+  NOW WE USE FORM_WITH FOR BOTH CASES. SO WE DONT HAVE TO USE FORM_TAG OR FORM_FOR ANYMORE!
+%>
+
+<% if false %>
+  <%= form_tag(blogs_path) do %>
+    <div class="form-group">
+      <%# we should define like this. Because ruby is working with hashes. And we should call these values as hash %>
+      <%= label_tag 'blog[title]', 'Blog Title' %>
+      <%# the second argument is the value. %>
+      <%= text_field_tag 'blog[title]', blog.title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag 'blog[body]', 'Blog Content' %>
+      <%= text_area_tag 'blog[body]', blog.body, class: "form-control", rows: 15 %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag 'Save', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 <% end %>
